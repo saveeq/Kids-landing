@@ -1,0 +1,118 @@
+@font-face {
+    font-family: Magistral;
+    src: url(/assets/fonts/Magistral/Magistral-Book.woff);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Magistral;
+    src: url(/assets/fonts/Magistral/Magistral-Bold.woff);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Magistral;
+    src: url(/assets/fonts/Magistral/Magistral-Medium.woff);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Magistral;
+    src: url(/assets/fonts/Magistral/Magistral-Light.woff);
+    font-weight: 200;
+    font-style: normal;
+}
+
+:root {
+    --white-cl: #fff;
+    --main-typography-color: #181618;
+    --button-background-grad: linear-gradient(90deg, rgba(0, 173, 216, 1) 0%, rgba(0, 202, 195, 1) 100%);
+    --contrast-typography-color: #5967b2;
+    --highlight-typography-color: #752346;
+    --highlight-typography-color1: #79417f;
+    --secondary-cl: #ac5676;
+    --light-secondary-cl: #ffe3f3;
+    --superlight-main-cl: #fff8fc;
+    --swiper-pagination-bottom: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 110px;
+    scrollbar-gutter: stable;
+    font-size: 62.5%;
+    line-height: 100%;
+}
+
+body {
+    width: 100%;
+    background-color: var(--light-secondary-cl);
+    font-family: Magistral, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 0;
+    padding: 0;
+    color: var(--main-typography-color);
+    position: relative;
+}
+
+.thank-you-message {
+    width: 70%;
+    height: auto;
+    color: var(--highlight-typography-color);
+    margin: 0 auto;
+    margin-top: 15%;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+    display: block;
+    line-height: 100%;
+}
+
+.tyspan{
+    font-size: 48px;
+    display: inline-block;
+    margin-bottom: 5%;
+}
+.homeButton {
+    font-family: Magistral, Arial, Helvetica, sans-serif;
+    width: 200px;
+    height: 40px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 5%;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    border-radius: 14px;
+    background: var(--button-background-grad);
+    color: var(--superlight-main-cl);
+    font-size: 24px;
+    text-align: center;
+    animation-delay: 3s;
+    cursor: pointer;
+    border: 0px;
+}
+.social_media {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 0 auto;
+    margin-top: 2%;
+    width: max-content;
+}
+.social{
+    width: 60px;
+    height: 60px;
+}
+.vk-logo{
+    width: 100%;
+}

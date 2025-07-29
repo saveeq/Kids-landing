@@ -1,0 +1,2206 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#79417f" />
+    <title>Детская стоматология Dent Service</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/icon__logo.png"
+      title="Favicon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=543a4dcc-226b-4b99-8a0b-71374fd51985&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+  </head>
+
+  <body ontouchstart="">    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
+
+      ym(1, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+      });
+    </script>
+    <noscript>
+      <div>
+        <img
+          src="https://mc.yandex.ru/watch/"
+          style="position: absolute; left: -9999px"
+          alt=""
+        />
+      </div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <div id="feedbackModal" class="modal">
+      <div class="modal-content">
+        <img src="assets/images/icon__logo.png" alt="" class="modal-teeth" />
+        <span class="close">&times;</span>
+        <div id="formHead" class="formheader">Записаться на приём</div>
+        <form id="feedbackForm">
+          <label for="name" class="label-name"
+            >Имя:
+            <input
+              class="form-input"
+              type="text"
+              id="name"
+              name="name"
+              required
+            />
+          </label>
+          <label for="phone" class="label-name"
+            >Номер телефона:
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="+79876543210"
+          /></label>
+          <div id="wrongnumber">Введите корректный номер телефона</div>
+          <button class="submit__button" type="submit">Отправить</button>
+        </form>
+        <div id="thankYouMessage" class="thank-you-message">
+          Спасибо!<br />
+          В ближайшее время с Вами свяжется наш администратор для уточнения
+          деталей.
+        </div>
+        <div id="formPolice" class="formpolicy">
+          В соответствии с требованиями ФЗ № 152 от 27.07.2006 г. «О
+          персональных данных» я даю добровольное согласие на обработку своих
+          персональных данных и соглашаюсь с
+          <a
+            href="https://dentserv.ru/policy"
+            target="_blank"
+            rel="noopener"
+            class="policy"
+            >политикой конфиденциальности.</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <header class="header">
+      <div class="header__wrap">
+        <div class="header__container">
+          <div class="header__logo">
+            <img
+              class="logo__dentservice"
+              src="assets/images/logodentservice1.svg"
+              alt="Логотип клиники"
+            />
+          </div>
+          <nav class="header-nav">
+            <ul class="nav-list">
+              <li class="nav-list-item">
+                <a class="nav-list-item-link" href="#section1">Услуги</a>
+              </li>
+              <li class="nav-list-item">
+                <a class="nav-list-item-link" href="#section2">Кейсы</a>
+              </li>
+              <li class="nav-list-item">
+                <a class="nav-list-item-link" href="#section3">О клинике</a>
+              </li>
+              <li class="nav-list-item">
+                <a class="nav-list-item-link" href="#section4">Цены</a>
+              </li>
+            </ul>
+            <div class="button-number">
+              <button
+                type="button"
+                class="feedbackButton"
+                data-toggle="modal"
+                data-target="#feedbackModal"
+              >
+                Записаться на приём
+              </button>
+              <a href="tel:+7 (495) 422-09-22" class="header__number"
+                >+7 (495) 422-09-22</a
+              >
+            </div>
+          </nav>
+        </div>
+        <div class="header__containerm">
+          <div class="logo__n__button">
+            <div class="header__logo">
+              <img
+                class="logo__dentservice"
+                src="assets/images/logodentservice1.svg"
+                alt="Логотип клиники"
+              />
+            </div>
+            <div class="button__n__mobile">
+              <a
+                class="feedbackButton"
+                data-toggle="modal"
+                data-target="#feedbackModal"
+              >
+                Записаться на приём
+              </a>
+              <div class="header__box__phones">
+                <a href="tel:+7 (495) 422-09-22" class="second__number"
+                  >+7 (495) 422-09-22</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header__box__locationm">
+      <div class="location__metro">
+        <div class="yasenevo__metro">
+          <div class="metro__logo">
+            <img src="assets/images/metrologo.svg" alt="Логотип метро" />
+          </div>
+          <div class="metro__value">Ясенево</div>
+        </div>
+        <div class="tepliy__metro">
+          <div class="metro__logo">
+            <img src="assets/images/metrologo.svg" alt="Логотип метро" />
+          </div>
+          <div class="metro__value">Теплый стан</div>
+        </div>
+      </div>
+      <div class="location__addres">
+        <address class="addres__walue">
+          г. Москва, ул. Вильнюсская, д. 13
+        </address>
+      </div>
+    </div>
+    <main class="main">
+      <div class="main__wrapper">
+        <div class="promo-section__wrapper">
+          <div class="pattern"></div>
+          <section class="promo__information">
+            <!-- <div class="promo__medals">
+                        <div class="first__medal">
+                            <div class="medal__image">
+                                <img src="/assets/images/frist__medal.png" alt="Медаль Продокторов"
+                                    class="first__medal__img">
+                            </div>
+                            <div class="second__medal__name">Победитель рейтинга StartSmile при поддержке ИД
+                                "КоммерсантЪ"
+                            </div>
+                            <div class="second__medal__namem">Победитель рейтинга StartSmile
+                            </div>
+                        </div>
+                        <div class="first__medal">
+                            <div class="medal__image">
+                                <img src="/assets/images/second__medal.png" alt="Медаль Продокторов"
+                                    class="first__medal__img">
+                            </div>
+                            <div class="first__medal__name">Топ 5 частных стоматологий Москвы премии Продокторов</div>
+                            <div class="first__medal__namem">Топ 5 частных стоматологий (ПроДокторов)</div>
+                        </div>
+                        <div class="first__medal">
+                            <div class="medal__image">
+                                <img src="/assets/images/third__medal.png" alt="Медаль Продокторов"
+                                    class="first__medal__img">
+                            </div>
+                            <div class="first__medal__name">Работаем с 2007 года!</div>
+                            <div class="first__medal__namem">Работаем с 2007 года!</div>
+                        </div>
+                    </div> -->
+            <h1 class="shine-text">Лечим детские зубки без слез</h1>
+            <div class="advantages__promo__text">
+              <ul class="advantages__list">
+                <li class="our__advantage">
+                  Индивидуальный подход к каждому ребенку
+                </li>
+                <li class="our__advantage">
+                  Никакого страха боли и неприятных воспоминаний
+                </li>
+                <li class="our__advantage">
+                  После приёма ребенок получает игрушку в подарок
+                </li>
+              </ul>
+            </div>
+            <button
+              type="button"
+              class="feedbackButton main__button"
+              data-toggle="modal"
+              data-target="#feedbackModal"
+            >
+              Записаться на приём
+            </button>
+          </section>
+          <img src="assets/images/girlpromo.webp" alt="" class="main-girl" />
+        </div>
+
+        <section class="sidebar-services section-animate">
+          <div class="sidebar_wrapper">
+            <div class="sidebar" id="sidebar">
+              <div class="tab" data-tab="checking">
+                <span class="tab-text">Диагностика</span>
+              </div>
+              <div class="tab" data-tab="milkteeth">
+                <span class="tab-text">Лечение молочных зубов</span>
+              </div>
+              <div class="tab" data-tab="surgery">
+                <span class="tab-text">Хирургическая стоматология</span>
+              </div>
+              <div class="tab" data-tab="orto">
+                <span class="tab-text">Ортодонтия</span>
+              </div>
+              <div class="tab" data-tab="prevention">
+                <span class="tab-text">Профилактика</span>
+              </div>
+              <div class="tab" data-tab="other">
+                <span class="tab-text">Другое</span>
+              </div>
+            </div>
+            <div class="main-content" id="mainContent">
+              <div class="content-panel" data-content="checking">
+                <img
+                  src="assets/images/checking.png"
+                  alt=""
+                  class="orto-image"
+                />
+                <div class="items-wrapper_item">
+                  <p class="item-description">Рентген</p>
+                </div>
+                <div class="items-wrapper_item">
+                  <p class="item-description">КТ-диагностика</p>
+                </div>
+              </div>
+
+              <div class="content-panel" data-content="milkteeth">
+                <img src="assets/images/milk.png" alt="" class="orto-image" />
+                <div class="items-wrapper_item">
+                  <p class="item-description">Лечение кариеса</p>
+                </div>
+                <div class="items-wrapper_item">
+                  <p class="item-description">Лечение пульпита</p>
+                </div>
+                <div class="items-wrapper_item">
+                  <p class="item-description">Лечение периодонтита</p>
+                </div>
+                <div class="items-wrapper_item">
+                  <p class="item-description">Лечение системой ICON</p>
+                </div>
+              </div>
+
+              <div class="content-panel" data-content="surgery">
+                <img
+                  src="assets/images/surgery.png"
+                  alt=""
+                  class="orto-image"
+                />
+                <div class="items-wrapper_item">
+                  <p class="item-description">Пластика уздечки лазером</p>
+                </div>
+                <div class="items-wrapper_item">
+                  <p class="item-description">Удаление молочных зубов</p>
+                </div>
+              </div>
+
+              <div class="content-panel" data-content="orto">
+                <img src="assets/images/orto.png" alt="" class="orto-image" />
+                <div class="items-wrapper_item">
+                  <p class="item-description">Исправление прикуса брекетами</p>
+                </div>
+                <div class="items-wrapper_item">
+                  <p class="item-description">Каппы</p>
+                </div>
+                <div class="items-wrapper_item">
+                  <p class="item-description">Элайнеры</p>
+                </div>
+                <div class="items-wrapper_item">
+                  <p class="item-description">
+                    Исправление прикуса пластинками
+                  </p>
+                </div>
+              </div>
+
+              <div class="content-panel" data-content="prevention">
+                <img
+                  src="assets/images/profilactic.png"
+                  alt=""
+                  class="orto-image"
+                />
+
+                <div class="items-wrapper_item">
+                  <p class="item-description">
+                    Гигиеническая чистка полости рта
+                  </p>
+                </div>
+                <div class="items-wrapper_item">
+                  <p class="item-description">Герметизация фиссур</p>
+                </div>
+                <div class="items-wrapper_item">
+                  <p class="item-description">Фторирование молочных зубов</p>
+                </div>
+              </div>
+
+              <div class="content-panel" data-content="other">
+                <img src="assets/images/skies.png" alt="" class="orto-image" />
+
+                <div class="items-wrapper_item">
+                  <p class="item-description">Скайсы</p>
+                </div>
+              </div>
+            </div>
+            <div class="description-content">
+              <div class="description-text" data-tab="checking" data-item="0">
+                Рентген в детской стоматологии необходим для точной диагностики,
+                особенно при лечении каналов и оценке прикуса.
+                <span class="description-text-accent"
+                  >Что включено в процедуру:</span
+                >
+                снимок одного или нескольких зубов, объяснение результатов.
+                <span class="description-text-accent">Стоимость услуги:</span>
+                от 600 ₽
+                <button class="description-button">Записаться</button>
+              </div>
+              <div class="description-text" data-tab="checking" data-item="1">
+                Компьютерная томография (КТ) позволяет увидеть структуру челюсти
+                в 3D и точно спланировать лечение, особенно при сложных случаях.
+                <span class="description-text-accent"
+                  >Что включено в процедуру:</span
+                >
+                3D-снимок, анализ, консультация врача по результатам.
+                <span class="description-text-accent">Стоимость услуги:</span>
+                от 2300 ₽
+                <button class="description-button">Записаться</button>
+              </div>
+              <div class="description-text" data-tab="milkteeth" data-item="0">
+                Лечение кариеса у детей требует особого подхода — мы используем
+                только щадящие методы, современные анестетики и материалы,
+                безопасные для растущих зубов. Наши врачи умеют находить контакт
+                с маленькими пациентами, чтобы визит к стоматологу не вызывал
+                страха.
+                <span class="description-text-accent"
+                  >Что включено в процедуру:</span
+                >
+                осмотр полости рта, анестезия, изоляция, лечение кариеса,
+                безопасные материалы для детских зубов.
+
+                <span class="description-text-accent">Стоимость услуги:</span>
+                от 3800 ₽
+                <button class="description-button">Записаться</button>
+              </div>
+              <div class="description-text" data-tab="milkteeth" data-item="1">
+                Пульпит — это воспаление пульпы (нерва) зуба, которое может
+                вызвать сильную боль. Мы бережно проводим лечение, сохраняя зуб
+                и предотвращая осложнения, в спокойной и понятной для ребёнка
+                обстановке.
+                <span class="description-text-accent"
+                  >Что включено в процедуру:</span
+                >
+                диагностика, анестезия, удаление пульпы, антисептическая
+                обработка каналов, пломбировка.
+                <span class="description-text-accent">Стоимость услуги:</span>
+                от 5000 ₽
+                <button class="description-button">Записаться</button>
+              </div>
+              <div class="description-text" data-tab="milkteeth" data-item="2">
+                Периодонтит — это воспаление тканей вокруг корня зуба. Мы
+                проводим комплексное лечение, позволяющее сохранить даже сильно
+                разрушенный зуб, используя безопасные и щадящие методы.
+                <span class="description-text-accent"
+                  >Что включено в процедуру:</span
+                >
+                осмотр, рентген, обработка каналов, антисептики, пломбировка.
+                <span class="description-text-accent">Стоимость услуги:</span>
+                от 5400 ₽
+                <button class="description-button">Записаться</button>
+              </div>
+              <div class="description-text" data-tab="milkteeth" data-item="3">
+                Метод ICON позволяет остановить начальный кариес без сверления.
+                Эта процедура абсолютно безболезненна и идеально подходит для
+                детей, у которых кариес только начинается.
+                <span class="description-text-accent"
+                  >Что включено в процедуру:</span
+                >
+                осмотр, очистка эмали, инфильтрация ICON, защита зуба.
+                <span class="description-text-accent">Стоимость услуги:</span>
+                от 4200 ₽
+                <button class="description-button">Записаться</button>
+              </div>
+              <div class="description-text" data-tab="surgery" data-item="0">
+                Короткая уздечка может влиять на речь и прикус. Лазерная
+                пластика — это быстрый и безопасный способ решить проблему без
+                швов и общего наркоза.
+                <span class="description-text-accent"
+                  >Что включено в процедуру:</span
+                >
+                осмотр, пластика лазером, рекомендации по восстановлению.
+                <span class="description-text-accent">Стоимость услуги:</span>
+                от 4900 ₽
+                <button class="description-button">Записаться</button>
+              </div>
+              <div class="description-text" data-tab="surgery" data-item="1">
+                Молочный зуб, который мешает постоянному или вызывает
+                воспаление, требует удаления. Мы делаем это быстро, аккуратно и
+                без боли.
+                <span class="description-text-accent"
+                  >Что включено в процедуру:</span
+                >
+                осмотр, местная анестезия, удаление зуба, рекомендации.
+                <span class="description-text-accent">Стоимость услуги:</span>
+                от 2500 ₽
+                <button class="description-button">Записаться</button>
+              </div>
+              <div class="description-text" data-tab="orto" data-item="0">
+                Брекеты — надёжный способ исправить прикус и выровнять зубы у
+                подростков. Мы подбираем оптимальную систему и сопровождаем на
+                всём этапе лечения.
+                <span class="description-text-accent"
+                  >Что включено в процедуру:</span
+                >
+                диагностика, слепки или скан, установка, регулярные приёмы.
+                <span class="description-text-accent">Стоимость услуги:</span>
+                от 68000 ₽ (вся система)
+                <button class="description-button">Записаться</button>
+              </div>
+              <div class="description-text" data-tab="orto" data-item="1">
+                Каппы — это удобные съёмные конструкции, которые мягко
+                корректируют прикус у детей и подростков.
+                <span class="description-text-accent"
+                  >Что включено в процедуру:</span
+                >
+                консультация, снятие слепков, изготовление каппы, сопровождение.
+                <span class="description-text-accent">Стоимость услуги:</span>
+                от 14000 ₽
+                <button class="description-button">Записаться</button>
+              </div>
+              <div class="description-text" data-tab="orto" data-item="2">
+                Элайнеры — это прозрачные каппы, которые почти незаметно
+                выравнивают зубы. Комфортны, съёмные и современные.
+                <span class="description-text-accent"
+                  >Что включено в процедуру:</span
+                >
+                диагностика, цифровое планирование, набор элайнеров, контроль
+                лечения.
+                <span class="description-text-accent">Стоимость услуги:</span>
+                от 99000 ₽
+                <button class="description-button">Записаться</button>
+              </div>
+              <div class="description-text" data-tab="orto" data-item="3">
+                Ортодонтические пластинки помогают формировать прикус у детей в
+                возрасте 5–12 лет. Удобны в ношении и эффективны при ранней
+                коррекции.
+                <span class="description-text-accent"
+                  >Что включено в процедуру:</span
+                >
+                диагностика, слепки, изготовление аппарата, коррекция.
+                <span class="description-text-accent">Стоимость услуги:</span>
+                от 18000 ₽
+                <button class="description-button">Записаться</button>
+              </div>
+              <div class="description-text" data-tab="prevention" data-item="0">
+                Профгигиена у детей — это не просто чистка, а профилактика
+                кариеса и приучение к уходу за зубами. Всё без боли и с заботой.
+                <span class="description-text-accent"
+                  >Что включено в процедуру:</span
+                >
+                снятие налёта, полировка, фторирование, рекомендации.
+                <span class="description-text-accent">Стоимость услуги:</span>
+                от 3200 ₽
+                <button class="description-button">Записаться</button>
+              </div>
+              <div class="description-text" data-tab="prevention" data-item="1">
+                Герметизация фиссур — это защита жевательных зубов от кариеса.
+                Процедура быстрая и абсолютно безболезненная.
+                <span class="description-text-accent"
+                  >Что включено в процедуру:</span
+                >
+                очистка поверхности, нанесение герметика, контроль.
+                <span class="description-text-accent">Стоимость услуги:</span>
+                от 1800 ₽ (за 1 зуб)
+                <button class="description-button">Записаться</button>
+              </div>
+              <div class="description-text" data-tab="prevention" data-item="2">
+                Фторирование — укрепление эмали специальным фторсоставом.
+                Особенно важно в период активного роста зубов.
+                <span class="description-text-accent"
+                  >Что включено в процедуру:</span
+                >
+                осмотр, чистка (при необходимости), нанесение фторлака.
+                <span class="description-text-accent">Стоимость услуги:</span>
+                от 1500 ₽
+                <button class="description-button">Записаться</button>
+              </div>
+              <div class="description-text" data-tab="other" data-item="0">
+                Скайсы — это декоративные кристаллы на зубах. Устанавливаются
+                без сверления, безопасно и при желании снимаются.
+                <span class="description-text-accent"
+                  >Что включено в процедуру:</span
+                >
+                выбор скайса, установка, рекомендации по уходу.
+                <span class="description-text-accent">Стоимость услуги:</span>
+                от 2000 ₽
+                <button class="description-button">Записаться</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="important-visit section-animate">
+          <h2 class="header-two">Почему детям важно посещать стоматолога?</h2>
+          <div class="important-visit_block block-one">
+            <p class="important-visit_text">
+              Молочные зубы — не временная "версия" постоянных, а полноценные
+              участники развития всей зубочелюстной системы. Если не лечить их,
+              кариес и воспаления могут повлиять на здоровье зачатков постоянных
+              зубов, вызвать неправильный прикус и даже привести к хроническим
+              инфекциям.<br /><br />У детей все воспалительные процессы
+              развиваются быстрее, чем у взрослых — поэтому так важно обнаружить
+              проблему на ранней стадии.Регулярные осмотры и профилактика
+              позволяют избежать боли, сложного лечения и стресса для ребёнка.
+            </p>
+          </div>
+          <div class="important-visit_block block-two">
+            <div class="important-visit_item">
+              <img
+                src="assets/images/important-visit.svg"
+                alt=""
+                class="important-visit_img"
+              />
+              <div class="block_content">
+                <h3 class="header-two important-visit_block-header">
+                  Когда к стоматологу нужно идти немедленно?
+                </h3>
+                <span class="important-visit_losung">
+                  Если вы замечаете один или несколько из этих признаков — не
+                  откладывайте визит:
+                </span>
+                <ul class="block_list">
+                  <li class="block_item">
+                    Зуб сильно шатается и мешает ребёнку есть или говорить
+                  </li>
+                  <li class="block_item">
+                    Жалобы на боль от сладкого, холодного или без причины
+                  </li>
+                  <li class="block_item">
+                    На зубах появились коричневые или чёрные пятна
+                  </li>
+                  <li class="block_item">
+                    Наблюдается припухлость или отёк десны, щеки
+                  </li>
+                  <li class="block_item">
+                    Постоянный зуб не может прорезаться из-за молочного
+                  </li>
+                  <li class="block_item">
+                    Ребёнок получил травму зуба (удар, скол, выпадение)
+                  </li>
+                  <li class="block_item">
+                    Постоянные зубы растут неровно или неправильно
+                  </li>
+                </ul>
+                <p class="block_descr">
+                  В любом из этих случаев визит к врачу откладывать нельзя. Чем
+                  раньше будет оказана помощь — тем проще, быстрее и
+                  безболезненнее пройдёт лечение. Не ждите осложнений —
+                  действуйте сейчас.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="doctors-visit section-animate">
+          <h2 class="header-two doctors-visit_header">
+            Комфорт и забота с первой минуты
+          </h2>
+
+          <span class="doctors-visit_losung">
+            Наша стоматология — это маленькое приключение с добрым финалом.
+          </span>
+          <div class="swiper visit-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper visit-swiper_wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide visit-swiper_slide">
+                <div class="slide-content">
+                  <h3 class="slide_header">Игровая зона до приёма</h3>
+                  <p class="slide-content_descr">
+                    Ожидание приёма — это не стресс. У нас есть игрушки, книги,
+                    мультики — ребёнок расслабляется и настраивается на позитив.
+                  </p>
+                </div>
+                <img
+                  src="assets/images/slide2.png"
+                  alt=""
+                  class="slide-content_img"
+                />
+              </div>
+
+              <div class="swiper-slide visit-swiper_slide1">
+                <div class="slide-content">
+                  <h3 class="slide_header">
+                    Детский стоматолог — это не страшно!
+                  </h3>
+                  <p class="slide-content_descr">
+                    С первых секунд создаём спокойную атмосферу: улыбаемся,
+                    объясняем, показываем, что будет происходить. Используем
+                    современные методы обезболивания — даже укол почти не
+                    чувствуется.
+                  </p>
+                </div>
+                <img
+                  src="assets/images/slide1.jpg"
+                  alt=""
+                  class="slide-content_img"
+                />
+              </div>
+              <div class="swiper-slide visit-swiper_slide2">
+                <div class="slide-content">
+                  <h3 class="slide_header">Мультфильмы во время лечения</h3>
+                  <p class="slide-content_descr">
+                    Любимые мультики во время процедуры отвлекают внимание
+                    малыша и помогают расслабиться. Это делает лечение почти
+                    незаметным.
+                  </p>
+                </div>
+                <img
+                  src="assets/images/slide3.png"
+                  alt=""
+                  class="slide-content_img"
+                />
+              </div>
+              <div class="swiper-slide visit-swiper_slide3">
+                <div class="slide-content">
+                  <h3 class="slide_header">
+                    Доброжелательное общение — на уровне ребёнка
+                  </h3>
+                  <p class="slide-content_descr">
+                    Мы не используем «страшных» слов, не пугаем, говорим на
+                    понятном и добром языке. Объясняем, что «живёт микроб,
+                    которого мы выгоним», или что «зубик просто умоем».
+                  </p>
+                </div>
+                <img
+                  src="assets/images/slide4.png"
+                  alt=""
+                  class="slide-content_img slide-content_img-4"
+                />
+              </div>
+              <div class="swiper-slide visit-swiper_slide4">
+                <div class="slide-content">
+                  <h3 class="slide_header">
+                    Приз за храбрость — из автомата с игрушками
+                  </h3>
+                  <p class="slide-content_descr">
+                    После приёма каждый смельчак получает небольшой подарок. Это
+                    не просто награда, а весёлый финал визита, который делает
+                    поход к врачу по-настоящему радостным событием!
+                  </p>
+                </div>
+                <img
+                  src="assets/images/slide5.png"
+                  alt=""
+                  class="slide-content_img"
+                />
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination visit-swiper_pagination"></div>
+          </div>
+        </section>
+
+        <section class="trust section-animate">
+          <h2 class="header-two" style="text-align: center">
+            Нам доверяют, потому что...
+          </h2>
+          <div class="trust-wrapper">
+            <div class="trust-block">
+              <div class="trust-item">
+                <div class="trust-item_number">от 1 года</div>
+                <div class="trust-item_descr">принимаем малышей</div>
+                <svg
+                  class="wave1"
+                  viewBox="0 0 800 300"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    id="wavyLine"
+                    stroke="#F8C457"
+                    stroke-width="12"
+                    fill="none"
+                    d="M 50,200 C 150,100 250,300 350,200 C 450,100 550,300 650,200 C 750,100"
+                  >
+                    <!-- Анимация формы линии с увеличенной амплитудой -->
+                    <animate
+                      attributeName="d"
+                      values="
+                                          M 50,200 C 150,50 250,350 350,200 C 450,50 550,350 650,200 C 750,50;
+                                          M 50,200 C 150,350 250,50 350,200 C 450,350 550,50 650,200 C 750,350;
+                                          M 50,200 C 150,50 250,350 350,200 C 450,50 550,350 650,200 C 750,50"
+                      dur="3s"
+                      repeatCount="indefinite"
+                    />
+
+                    <!-- Анимация толщины -->
+                    <animate
+                      attributeName="stroke-width"
+                      values="12;20;12"
+                      dur="4s"
+                      repeatCount="indefinite"
+                    />
+                  </path>
+                </svg>
+              </div>
+
+              <div class="trust-item">
+                <div class="trust-item_number" style="color: #a4404c">100%</div>
+                <div class="trust-item_descr" style="color: #a4404c">
+                  безболезненное лечение
+                </div>
+                <svg
+                  class="wave2"
+                  viewBox="0 0 800 300"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    id="wavyLine"
+                    stroke="#E8934F"
+                    stroke-width="12"
+                    fill="none"
+                    d="M 50,200 C 150,100 250,300 350,200 C 450,100 550,300 650,200 C 750,100"
+                  >
+                    <!-- Анимация формы линии с увеличенной амплитудой -->
+                    <animate
+                      attributeName="d"
+                      values="
+                                          M 50,200 C 150,50 250,350 350,200 C 450,50 550,350 650,200 C 750,50;
+                                          M 50,200 C 150,350 250,50 350,200 C 450,350 550,50 650,200 C 750,350;
+                                          M 50,200 C 150,50 250,350 350,200 C 450,50 550,350 650,200 C 750,50"
+                      dur="4s"
+                      repeatCount="indefinite"
+                    />
+
+                    <!-- Анимация толщины -->
+                    <animate
+                      attributeName="stroke-width"
+                      values="12;20;12"
+                      dur="5s"
+                      repeatCount="indefinite"
+                    />
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="trust-block">
+              <div class="trust-item" style="background-color: #f8c457">
+                <div class="trust-item_number" style="color: #a4404c">
+                  >18 лет
+                </div>
+                <div class="trust-item_descr" style="color: #a4404c">
+                  заботы о детских улыбках
+                </div>
+                <svg
+                  class="wave3"
+                  viewBox="0 0 800 300"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    id="wavyLine"
+                    stroke="#E8934F"
+                    stroke-width="12"
+                    fill="none"
+                    d="M 50,200 C 150,100 250,300 350,200 C 450,100 550,300 650,200 C 750,100"
+                  >
+                    <!-- Анимация формы линии с увеличенной амплитудой -->
+                    <animate
+                      attributeName="d"
+                      values="
+                                          M 50,200 C 150,50 250,350 350,200 C 450,50 550,350 650,200 C 750,50;
+                                          M 50,200 C 150,350 250,50 350,200 C 450,350 550,50 650,200 C 750,350;
+                                          M 50,200 C 150,50 250,350 350,200 C 450,50 550,350 650,200 C 750,50"
+                      dur="5s"
+                      repeatCount="indefinite"
+                    />
+
+                    <!-- Анимация толщины -->
+                    <animate
+                      attributeName="stroke-width"
+                      values="12;20;12"
+                      dur="6s"
+                      repeatCount="indefinite"
+                    />
+                  </path>
+                </svg>
+              </div>
+              <div class="trust-item" style="background-color: #e8934f">
+                <div class="trust-item_number">1500+</div>
+                <div class="trust-item_descr">маленьких пациентов в год</div>
+                <svg
+                  class="wave4"
+                  viewBox="0 0 800 300"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    id="wavyLine"
+                    stroke="#F8C457"
+                    stroke-width="12"
+                    fill="none"
+                    d="M 50,200 C 150,100 250,300 350,200 C 450,100 550,300 650,200 C 750,100"
+                  >
+                    <!-- Анимация формы линии с увеличенной амплитудой -->
+                    <animate
+                      attributeName="d"
+                      values="
+                                          M 50,200 C 150,50 250,350 350,200 C 450,50 550,350 650,200 C 750,50;
+                                          M 50,200 C 150,350 250,50 350,200 C 450,350 550,50 650,200 C 750,350;
+                                          M 50,200 C 150,50 250,350 350,200 C 450,50 550,350 650,200 C 750,50"
+                      dur="4s"
+                      repeatCount="indefinite"
+                    />
+
+                    <!-- Анимация толщины -->
+                    <animate
+                      attributeName="stroke-width"
+                      values="12;20;12"
+                      dur="5s"
+                      repeatCount="indefinite"
+                    />
+                  </path>
+                </svg>
+              </div>
+            </div>
+            <div class="trust-block">
+              <div class="trust-item">
+                <div class="trust-item_number">98%</div>
+                <div class="trust-item_descr">родителей возвращаются снова</div>
+                <svg
+                  class="wave5"
+                  viewBox="0 0 800 300"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    id="wavyLine"
+                    stroke="#F8C457"
+                    stroke-width="12"
+                    fill="none"
+                    d="M 50,200 C 150,100 250,300 350,200 C 450,100 550,300 650,200 C 750,100"
+                  >
+                    <!-- Анимация формы линии с увеличенной амплитудой -->
+                    <animate
+                      attributeName="d"
+                      values="
+                                          M 50,200 C 150,50 250,350 350,200 C 450,50 550,350 650,200 C 750,50;
+                                          M 50,200 C 150,350 250,50 350,200 C 450,350 550,50 650,200 C 750,350;
+                                          M 50,200 C 150,50 250,350 350,200 C 450,50 550,350 650,200 C 750,50"
+                      dur="6s"
+                      repeatCount="indefinite"
+                    />
+
+                    <!-- Анимация толщины -->
+                    <animate
+                      attributeName="stroke-width"
+                      values="12;20;12"
+                      dur="7s"
+                      repeatCount="indefinite"
+                    />
+                  </path>
+                </svg>
+              </div>
+              <div class="trust-item">
+                <div class="trust-item_number" style="color: #a4404c">24/7</div>
+                <div class="trust-item_descr" style="color: #a4404c">
+                  стерильность — полный контроль
+                </div>
+                <svg
+                  class="wave6"
+                  viewBox="0 0 800 300"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    id="wavyLine"
+                    stroke="#E8934F"
+                    stroke-width="12"
+                    fill="none"
+                    d="M 50,200 C 150,100 250,300 350,200 C 450,100 550,300 650,200 C 750,100"
+                  >
+                    <!-- Анимация формы линии с увеличенной амплитудой -->
+                    <animate
+                      attributeName="d"
+                      values="
+                                          M 50,200 C 150,50 250,350 350,200 C 450,50 550,350 650,200 C 750,50;
+                                          M 50,200 C 150,350 250,50 350,200 C 450,350 550,50 650,200 C 750,350;
+                                          M 50,200 C 150,50 250,350 350,200 C 450,50 550,350 650,200 C 750,50"
+                      dur="3s"
+                      repeatCount="indefinite"
+                    />
+
+                    <!-- Анимация толщины -->
+                    <animate
+                      attributeName="stroke-width"
+                      values="12;20;12"
+                      dur="4s"
+                      repeatCount="indefinite"
+                    />
+                  </path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <img src="assets/images/trust.svg" alt="" class="trust-img" />
+        </section>
+
+        <section class="trust-mobile section-animate">
+          <h2 class="header-two" style="text-align: center">
+            Нам доверяют, потому что...
+          </h2>
+          <div class="trust-wrapper">
+            <div class="trust-block">
+              <div class="trust-item">
+                <div class="trust-item_number">98%</div>
+                <div class="trust-item_descr">родителей возвращаются снова</div>
+              </div>
+              <div class="trust-item">
+                <div class="trust-item_number">от 1 года</div>
+                <div class="trust-item_descr">принимаем малышей</div>
+
+              </div>
+
+              <div class="trust-item">
+                <div class="trust-item_number" style="color: #a4404c">100%</div>
+                <div class="trust-item_descr" style="color: #a4404c">
+                  безболезненное лечение
+                </div>
+              </div>
+            </div>
+            <img src="assets/images/trust.svg" alt="" class="trust-img" />
+            <div class="trust-block">
+              <div class="trust-item">
+                <div class="trust-item_number" style="color: #a4404c">24/7</div>
+                <div class="trust-item_descr" style="color: #a4404c">
+                  стерильность — полный контроль
+                </div>
+              </div>
+              <div class="trust-item" style="background-color: #f8c457">
+                <div class="trust-item_number" style="color: #a4404c">
+                  >18 лет
+                </div>
+                <div class="trust-item_descr" style="color: #a4404c">
+                  заботы о детских улыбках
+                </div>
+              </div>
+              <div class="trust-item" style="background-color: #e8934f">
+                <div class="trust-item_number">1500+</div>
+                <div class="trust-item_descr">маленьких пациентов в год</div>
+              </div>
+            </div>
+          </div>
+          
+        </section>
+
+        <section class="info__cards section-animate">
+          <article class="card">
+            <div class="second__card__info">Опыт врачей более 14 лет</div>
+            <div class="second__card__img">
+              <img
+                src="assets/images/doctors__exp.svg"
+                class="imagetwo"
+                alt="Логотип компании KAVO"
+              />
+            </div>
+          </article>
+          <article class="card">
+            <div class="first__card__info">Немецкое оборудование KAVO</div>
+            <div class="first__card__img">
+              <img
+                src="assets/images/kavo__card.png"
+                class="kavoimg"
+                alt="Логотип компании KAVO"
+              />
+            </div>
+          </article>
+          <article class="card">
+            <div class="third__card__info">
+              Работаем по американским и европейским протоколам
+            </div>
+            <div class="third__card__img">
+              <img
+                src="assets/images/protocols.svg"
+                class="imagetwo"
+                alt="Логотип компании KAVO"
+              />
+            </div>
+          </article>
+          <div class="promo__medalsm">
+            <div class="first__medal">
+              <div class="medal__image">
+                <img
+                  src="/assets/images/frist__medal.png"
+                  alt="Медаль Продокторов"
+                  class="first__medal__img"
+                />
+              </div>
+              <div class="second__medal__name">
+                Победитель рейтинга StartSmile при поддержке ИД "КоммерсантЪ"
+              </div>
+              <div class="second__medal__namem">
+                Победитель рейтинга StartSmile
+              </div>
+            </div>
+            <div class="first__medal">
+              <div class="medal__image">
+                <img
+                  src="/assets/images/second__medal.png"
+                  alt="Медаль Продокторов"
+                  class="first__medal__img"
+                />
+              </div>
+              <div class="first__medal__name">
+                Топ 5 частных стоматологий Москвы премии Продокторов
+              </div>
+              <div class="first__medal__namem">
+                Топ 5 частных стоматологий (ПроДокторов)
+              </div>
+            </div>
+            <div class="first__medal">
+              <div class="medal__image">
+                <img
+                  src="/assets/images/third__medal.png"
+                  alt="Медаль Продокторов"
+                  class="first__medal__img"
+                />
+              </div>
+              <div class="first__medal__name">Работаем с 2007 года!</div>
+              <div class="first__medal__namem">Работаем с 2007 года!</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="kids-doctors section-animate">
+          <div class="kids-doctors_descripton">
+            <div class="descr_wrapper">
+              <h2 class="header-two">Наши специалисты</h2>
+              <p class="kddescripton">
+                Детские стоматологи нашей клиники — это опытные и заботливые
+                специалисты, которые находят подход к каждому ребёнку. Мы
+                создаём комфортную и дружелюбную атмосферу, чтобы визит к врачу
+                вызывал только положительные эмоции. Лечение проходит мягко,
+                бережно и с учётом возрастных особенностей маленьких пациентов.
+              </p>
+            </div>
+            <img
+              src="assets/images/doctor-illustration.svg"
+              alt=""
+              class="kd-illustration"
+            />
+          </div>
+          <div class="kids-doctors-wrapper">
+            <div class="kid-doctor-card">
+              <h3 class="doctor-card_header">Муравьёва Татьяна Викторовна</h3>
+              <span class="citation"
+                >«Каждый маленький пациент — как свой ребёнок»</span
+              >
+              <div class="doctor-card_wrapper">
+                <img src="assets/images/murav.png" alt="" class="doctor-phot" />
+                <div class="doctor-description">
+                  <span class="doctor-description_span"
+                    >Детский стоматолог</span
+                  >
+                  <span class="doctor-description_span"
+                    >Стаж работы - 15 лет</span
+                  >
+                  <span class="doctor-description_span">Специализации:</span>
+                  <ul class="doctor-description_spec-list">
+                    <li class="spec-list_item">Лечение периодонтита зубов</li>
+                    <li class="spec-list_item">Гигиеническая чистка полости рта
+                    </li>
+                    <li class="spec-list_item">Лечение кариеса молочных зубов
+                    </li>
+                    <li class="spec-list_item">Герметизация фиссур</li>
+                    <li class="spec-list_item">Фторирование зубов</li>
+                  </ul>
+                </div>
+              </div>
+              <a
+                class="feedbackButton doctor-btn"
+                data-toggle="modal"
+                data-target="#feedbackModal"
+              >
+                Записаться на приём
+              </a>
+            </div>
+            <div class="kid-doctor-card">
+              <h3 class="doctor-card_header1">Широкова Светлана Андреевна</h3>
+              <span class="citation2">
+                «К каждому зубику — с заботой и терпением»</span
+              >
+
+              <div class="doctor-card_wrapper">
+                <div class="doctor-description">
+                  <span class="doctor-description_span2"
+                    >Детский стоматолог</span
+                  >
+                  <span class="doctor-description_span2"
+                    >Стаж работы - 9 лет</span
+                  >
+                  <span class="doctor-description_span2">Специализации:</span>
+                  <ul class="doctor-description_spec-list2">
+                    <li class="spec-list_item2">Лечение молочных зубов</li>
+                    <li class="spec-list_item2">Лечение кариеса</li>
+                    <li class="spec-list_item2">Лечение пульпита</li>
+                    <li class="spec-list_item2">Фторирование молочных зубов</li>
+                    <li class="spec-list_item2">Гигиеническая чистка полости рта
+                    </li>
+                  </ul>
+                </div>
+                <img
+                  src="assets/images/SHi.png"
+                  alt=""
+                  class="doctor-phot doctor-phot-shirokova"
+                />
+              </div>
+              <a
+                class="feedbackButton doctor-btn2"
+                data-toggle="modal"
+                data-target="#feedbackModal"
+              >
+                Записаться на приём
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="clinic-cases section-animate" id="section2">
+          <h2 class="header-two">Реальные кейсы: до и после лечения</h2>
+          <div class="cases-swiper swiper">
+            <div class="cases-swiper_wrapper swiper-wrapper">
+              <div class="swiper-slide case-slide">
+                <two-up class="case-photo-slider swiper-no-swiping">
+                  <img src="assets/images/case1_before.png" alt="До" class="case-photo before">
+                  <img src="assets/images/case1_after.png" alt="После" class="case-photo after">
+                </two-up>
+                <div class="case-info">
+                  <div class="case-doctor">Врач: Иванова Мария Петровна</div>
+                  <div class="case-desc">
+                    <b>Проблема:</b> Кариес молочного зуба.<br>
+                    <b>Решение:</b> Щадящее лечение с применением современных материалов.
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide case-slide">
+                <two-up class="case-photo-slider swiper-no-swiping">
+                  <img src="assets/images/case2_before.png" alt="До" class="case-photo before">
+                  <img src="assets/images/case2_after.png" alt="После" class="case-photo after">
+                </two-up>
+                <div class="case-info">
+                  <div class="case-doctor">Врач: Петров Алексей Сергеевич</div>
+                  <div class="case-desc">
+                    <b>Проблема:</b> Травма переднего зуба.<br>
+                    <b>Решение:</b> Восстановление эстетики и функции зуба.
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide case-slide">
+                <two-up class="case-photo-slider swiper-no-swiping">
+                  <img src="assets/images/case3_before.png" alt="До" class="case-photo before">
+                  <img src="assets/images/case3_after.png" alt="После" class="case-photo after">
+                </two-up>
+                <div class="case-info">
+                  <div class="case-doctor">Врач: Смирнова Ольга Николаевна</div>
+                  <div class="case-desc">
+                    <b>Проблема:</b> Неправильный прикус.<br>
+                    <b>Решение:</b> Ортодонтическое лечение с применением пластинок.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="swiper-pagination cases-swiper_pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </section>
+
+        <section class="kid-prices section-animate">
+          <h2 class="header-two">ЦЕНЫ НА УСЛУГИ</h2>
+
+          <div class="buttons-group">
+            <div class="type-button_container" data-target="content1">
+              <div class="type-button_bg"></div>
+              <button class="type-button">Диагностика</button>
+            </div>
+            <div class="type-button_container" data-target="content2">
+              <div class="type-button_bg"></div>
+              <button class="type-button">Детская стоматология</button>
+            </div>
+            <div class="type-button_container" data-target="content3">
+              <div class="type-button_bg"></div>
+              <button class="type-button">Детская ортодонтия</button>
+            </div>
+          </div>
+          <table class="price-table">
+            <thead class="price-table_head">
+              <tr class="price-table_headrow">
+                <th class="headrow-item">Перечень основных услуг</th>
+                <th class="headrow-item">Цена, ₽</th>
+              </tr>
+            </thead>
+            <tbody id="content1" class="price-table_body">
+              <tr class="price-table_row">
+                <td class="price-table_data">
+                  Консультация детского стоматолога
+                </td>
+                <td class="price-table_datap">500</td>
+              </tr>
+              <tr class="price-table_row">
+                <td class="price-table_data">Компьютерная томография</td>
+                <td class="price-table_datap">4000</td>
+              </tr>
+            </tbody>
+            <tbody id="content2" class="price-table_body">
+              <tr class="price-table_row">
+                <td class="price-table_data">
+                  Полировка профессиональной пастой (1 зуб)
+                </td>
+                <td class="price-table_datap">132</td>
+              </tr>
+              <tr class="price-table_row">
+                <td class="price-table_data">
+                  Локальное обогощение фтором (1 зуб)
+                </td>
+                <td class="price-table_datap">165</td>
+              </tr>
+              <tr class="price-table_row">
+                <td class="price-table_data">
+                  Серебрение одного зуба (1 посещение)
+                </td>
+                <td class="price-table_datap">550</td>
+              </tr>
+              <tr class="price-table_row">
+                <td class="price-table_data">Герметизация фиссур (1 зуб)</td>
+                <td class="price-table_datap">от 1 650</td>
+              </tr>
+              <tr class="price-table_row">
+                <td class="price-table_data">Удаление молочного зуба</td>
+                <td class="price-table_datap">от 1 900</td>
+              </tr>
+              <tr class="price-table_row">
+                <td class="price-table_data">Лечение кариеса молочного зуба</td>
+                <td class="price-table_datap">от 3 800</td>
+              </tr>
+              <tr class="price-table_row">
+                <td class="price-table_data">
+                  Лечение пульпита молочного зуба
+                </td>
+                <td class="price-table_datap">от 8 040</td>
+              </tr>
+              <tr class="price-table_row">
+                <td class="price-table_data">
+                  Лечение кариеса постоянного зуба
+                </td>
+                <td class="price-table_datap">от 4 500</td>
+              </tr>
+              <tr class="price-table_row">
+                <td class="price-table_data">
+                  Лечение пульпита постоянного зуба
+                </td>
+                <td class="price-table_datap">от 13 070</td>
+              </tr>
+              <tr class="price-table_row">
+                <td class="price-table_data">
+                  Лечение кариеса без препарирования (система ICON)
+                </td>
+                <td class="price-table_datap">от 5 000</td>
+              </tr>
+              <tr class="price-table_row">
+                <td class="price-table_data">Пластика уздечки языка лазером</td>
+                <td class="price-table_datap">от 8 000</td>
+              </tr>
+              <tr class="price-table_row">
+                <td class="price-table_data">Скайсы</td>
+                <td class="price-table_datap">от 2 200</td>
+              </tr>
+            </tbody>
+            <tbody id="content3" class="price-table_body">
+              <tr class="price-table_row">
+                <td class="price-table_data">Детская пластинка</td>
+                <td class="price-table_datap">от 18 700</td>
+              </tr>
+              <tr class="price-table_row">
+                <td class="price-table_data">
+                  Брекет-система керамика (1 челюсть)
+                </td>
+                <td class="price-table_datap">от 77 500</td>
+              </tr>
+              <tr class="price-table_row">
+                <td class="price-table_data">
+                  Брекет-система металл (1 челюсть)
+                </td>
+                <td class="price-table_datap">от 52 800</td>
+              </tr>
+              <tr class="price-table_row">
+                <td class="price-table_data">
+                  Исправление прикуса без брекетов система INVISALIGN (до 14
+                  капп)
+                </td>
+                <td class="price-table_datap">от 490 000</td>
+              </tr>
+              <tr class="price-table_row">
+                <td class="price-table_data">
+                  Исправление прикуса без брекетов система INVISALIGN (более 14
+                  капп)
+                </td>
+                <td class="price-table_datap">от 580 000</td>
+              </tr>
+              <tr class="price-table_row">
+                <td class="price-table_data">
+                  Ортодонтические элайнеры (каппы)
+                </td>
+                <td class="price-table_datap">от 420 000</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="faq section-animate">
+          <h2 class="header-faq">Родители спрашивают — мы отвечаем</h2>
+
+          <div class="faq-container">
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Когда нужно вести ребёнка к стоматологу впервые?</span>
+                <span class="icon">&#9662;</span>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  Идеально — с появлением первых зубов или не позднее 1 года.
+                  Это поможет избежать страха и привыкнуть к приёмам.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span
+                  >Нужно ли лечить молочные зубы, если они всё равно
+                  выпадут?</span
+                >
+                <span class="icon">&#9662;</span>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  Да! Нелеченные молочные зубы могут вызвать боль, воспаление и
+                  повлиять на формирование постоянных зубов.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span
+                  >Можно ли мне находиться рядом с ребёнком во время
+                  приёма?</span
+                >
+                <span class="icon">&#9662;</span>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  Конечно! Мы всегда приветствуем присутствие родителей — так
+                  ребёнок чувствует себя увереннее.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Будет ли больно?</span>
+                <span class="icon">&#9662;</span>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  Нет. Мы применяем современные анестетики и техники, чтобы
+                  исключить любую боль — даже укол почти не ощущается.
+                </div>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Как подготовить ребёнка к первому визиту?</span>
+                <span class="icon">&#9662;</span>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  Расскажите малышу, что стоматолог — это друг. Избегайте
+                  "страшных" слов. Можно поиграть дома в "доктора".
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>Что делать после лечения?</span>
+                <span class="icon">&#9662;</span>
+              </div>
+              <div class="faq-answer">
+                <div class="faq-answer-content">
+                  Обычно рекомендуем не есть и не пить 1–2 часа. Врач даст
+                  конкретные рекомендации после процедуры.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="reviews section-animate">
+          <h2 class="header-three">Оценки и отзывы довольных пациентов</h2>
+          <div class="reviews__content">
+            <div class="live-review">
+              <div class="live-review__header">
+                <span class="header__name">Анастасия</span>
+                <img
+                  src="assets/images/review-stars.svg"
+                  alt=""
+                  class="live-review__stars"
+                />
+              </div>
+              <p class="live-review__text">
+                Привозила сына 5 лет, вчера на удаление молочного зуба. Попали к
+                Татьяне. Удалила зуб быстро, отвлекала ребенка разговорами. Все
+                прошло хорошо, без слез и стресса. Спасибо =)
+              </p>
+              <span class="live-review__date">17 мая 2025</span>
+            </div>
+            <div class="live-review">
+              <div class="live-review__header">
+                <span class="header__name">Дарья Н.</span>
+                <img
+                  src="assets/images/review-stars.svg"
+                  alt=""
+                  class="live-review__stars"
+                />
+              </div>
+
+              <p class="live-review__text">
+                Прекрасная стоматология! Ребенок перестал бояться лечить зубы,
+                попав к Муравьевой Татьяне Викторовне. Каждый раз, как праздник,
+                даже удаление зубов ☺️ Рекомендуем 💯💯💯
+              </p>
+              <span class="live-review__date">24 ноября 2024</span>
+            </div>
+            <div class="live-review">
+              <div class="live-review__header">
+                <span class="header__name">Фарида А.</span>
+                <img
+                  src="assets/images/review-stars.svg"
+                  alt=""
+                  class="live-review__stars"
+                />
+              </div>
+
+              <p class="live-review__text">
+                Хочу поблагодарить нашего доктора Ласточкину Анастасию Юрьевну и
+                ассистента Викторию за вылеченные зубы маленького пациента без
+                боли и слез! Их терпение, чуткое отношение к детям! Все сделано
+                быстро, хорошо, профессионально! Благодарю еще раз и желаю
+                успехов в таком светлом деле! ❤️ ребенок счастлив, мама
+                довольна!
+              </p>
+              <span class="live-review__date">26 июля 2025</span>
+            </div>
+            <div class="live-review">
+              <div class="live-review__header">
+                <span class="header__name">Алена А.</span>
+                <img
+                  src="assets/images/review-stars.svg"
+                  alt=""
+                  class="live-review__stars"
+                />
+              </div>
+
+              <p class="live-review__text">
+                Ходим в клинику не первый раз, и я как Мама хочу порекомендовать
+                и выразить благодарность детскому врачу Широковой Светлане
+                Андреевне за её профессионализм и подход к детям Мой сын всегд
+                очень волнуется перед посещением стоматолога, но как только
+                садился в её кресло, забывает обо всём! Она всегда
+                доброжелательна и внимательна создаёт комфортную атмосферу и
+                делает лечение зубов приятным и безболезненным процессом. А еще
+                по окончанию лечения, как настоящая фея дарит подарки!
+              </p>
+              <span class="live-review__date">1 февраля 2025</span>
+
+            </div>
+            
+          </div>
+
+          <div class="reviews__wrap">
+            <div class="services-reviews">
+              <div class="services-reviews_row">
+                <a href="https://go.2gis.com/zWW9g" class="service-review">
+                  <div class="service-review__logo">
+                    <img
+                      src="assets/images/2gis.png"
+                      alt=""
+                      class="service-review__logo__img"
+                    />
+                    <span class="rev-count">21 отзыв</span>
+                  </div>
+                  <div class="service-review__mark">
+                    <span class="rev-number">4,8/5</span>
+                    <img src="assets/images/48star.png" alt="" class="stars" />
+                  </div>
+                </a>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.yell.ru/moscow/com/stomatologicheskaya-klinika-dent-servis_5629142/"
+                  class="service-review"
+                >
+                  <div class="service-review__logo">
+                    <img
+                      src="assets/images/yell.png"
+                      alt=""
+                      class="service-review__logo__img"
+                    />
+                    <span class="rev-count">91 отзыв</span>
+                  </div>
+                  <div class="service-review__mark">
+                    <span class="rev-number">4,8/5</span>
+                    <img src="assets/images/48star.png" alt="" class="stars" />
+                  </div>
+                </a>
+              </div>
+              <div class="services-reviews_row">
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://zoon.ru/msk/medical/stomatologicheskaya_klinika_dent_servis_v_yasenevo/"
+                  class="service-review"
+                >
+                  <div class="service-review__logo">
+                    <img
+                      src="assets/images/zoon.png"
+                      alt=""
+                      class="service-review__logo__img"
+                    />
+                    <span class="rev-count">195 отзывов</span>
+                  </div>
+                  <div class="service-review__mark">
+                    <span class="rev-number">4,5/5</span>
+                    <img src="assets/images/45star.png" alt="" class="stars" />
+                  </div>
+                </a>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://topdent.ru/clinics/dent-servis3/"
+                  class="service-review"
+                >
+                  <div class="service-review__logo">
+                    <img
+                      src="assets/images/topdent.png"
+                      alt=""
+                      class="service-review__logo__img"
+                    />
+                    <span class="rev-count">82 отзыва</span>
+                  </div>
+                  <div class="service-review__mark">
+                    <span class="rev-number">4,8/5</span>
+                    <img src="assets/images/48star.png" alt="" class="stars" />
+                  </div>
+                </a>
+              </div>
+              <div class="services-reviews_row">
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.32top.ru/clinics/1909/"
+                  class="service-review"
+                >
+                  <div class="service-review__logo">
+                    <img
+                      src="assets/images/32-top.png"
+                      alt=""
+                      class="service-review__logo__img"
+                    />
+                    <span class="rev-count">13 отзывов</span>
+                  </div>
+                  <div class="service-review__mark">
+                    <span class="rev-number">4,5/5</span>
+                    <img src="assets/images/45star.png" alt="" class="stars" />
+                  </div>
+                </a>
+                <a
+                  target="_blank"
+                  rel="noopener"
+                  href="https://maps.app.goo.gl/FqiTwonuUNPiNpkW7"
+                  class="service-review"
+                >
+                  <div class="service-review__logo">
+                    <img
+                      src="assets/images/google.png"
+                      alt=""
+                      class="service-review__logo__img"
+                    />
+                    <span class="rev-count">44 отзыва</span>
+                  </div>
+                  <div class="service-review__mark">
+                    <span class="rev-number">4,7/5</span>
+                    <img src="assets/images/48star.png" alt="" class="stars" />
+                  </div>
+                </a>
+              </div>
+              <div
+                class="desctrev"
+                style="
+                  width: 100%;
+                  height: 500px;
+                  overflow: hidden;
+                  position: relative;
+                "
+              >
+                <iframe
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid #e6e6e6;
+                    border-radius: 20px;
+                    box-sizing: border-box;
+                  "
+                  src="https://yandex.ru/maps-reviews-widget/1005507806?comments"
+                ></iframe>
+              </div>
+            </div>
+            <div class="swiper reviews__swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide slide1">
+                  <video
+                    controls
+                    poster="assets/images/promo__rev.png"
+                    src="assets/videos/first__review.MP4"
+                    class="first__review"
+                  ></video>
+                </div>
+                <div class="swiper-slide slide2">
+                  <video
+                    controls
+                    src="assets/videos/second__review.MP4"
+                    class="second__review"
+                  ></video>
+                </div>
+                <div class="swiper-slide slide3">
+                  <video
+                    controls
+                    src="assets/videos/third__review.MP4"
+                    class="third__review"
+                  ></video>
+                </div>
+                ...
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+          <div class="reviews__wrapper">
+            <div
+              class="mobilerev"
+              style="
+                width: 100%;
+                height: 700px;
+                overflow: hidden;
+                position: relative;
+              "
+            >
+              <iframe
+                style="
+                  width: 100%;
+                  height: 100%;
+                  border: 1px solid #e6e6e6;
+                  border-radius: 20px;
+                  box-sizing: border-box;
+                "
+                src="https://yandex.ru/maps-reviews-widget/1005507806?comments"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+        <section class="reviews-mobile section-animate">
+          <h2 class="header-two">Оценки и отзывы довольных пациентов</h2>
+          <div class="services-reviews_row">
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://topdent.ru/clinics/dent-servis3/"
+              class="service-review"
+            >
+              <div class="service-review__logo">
+                <img
+                  src="assets/images/topdent.png"
+                  alt=""
+                  class="service-review__logo__img"
+                />
+                <span class="rev-count">82 отзыва</span>
+              </div>
+              <div class="service-review__mark">
+                <span class="rev-number">4,8/5</span>
+                <img src="assets/images/48star.png" alt="" class="stars" />
+              </div>
+            </a>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.yell.ru/moscow/com/stomatologicheskaya-klinika-dent-servis_5629142/"
+              class="service-review"
+            >
+              <div class="service-review__logo">
+                <img
+                  src="assets/images/yell.png"
+                  alt=""
+                  class="service-review__logo__img"
+                />
+                <span class="rev-count">91 отзыв</span>
+              </div>
+              <div class="service-review__mark">
+                <span class="rev-number">4,8/5</span>
+                <img src="assets/images/48star.png" alt="" class="stars" />
+              </div>
+            </a>
+          </div>
+          <div class="services-reviews_row">
+            <a href="https://go.2gis.com/zWW9g" class="service-review">
+              <div class="service-review__logo">
+                <img
+                  src="assets/images/2gis.png"
+                  alt=""
+                  class="service-review__logo__img"
+                />
+                <span class="rev-count">21 отзыв</span>
+              </div>
+              <div class="service-review__mark">
+                <span class="rev-number">4,8/5</span>
+                <img src="assets/images/48star.png" alt="" class="stars" />
+              </div>
+            </a>
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://maps.app.goo.gl/FqiTwonuUNPiNpkW7"
+              class="service-review"
+            >
+              <div class="service-review__logo">
+                <img
+                  src="assets/images/google.png"
+                  alt=""
+                  class="service-review__logo__img"
+                />
+                <span class="rev-count">44 отзыва</span>
+              </div>
+              <div class="service-review__mark">
+                <span class="rev-number">4,7/5</span>
+                <img src="assets/images/48star.png" alt="" class="stars" />
+              </div>
+            </a>
+          </div>
+          <div class="services-reviews_row">
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://zoon.ru/msk/medical/stomatologicheskaya_klinika_dent_servis_v_yasenevo/"
+              class="service-review"
+            >
+              <div class="service-review__logo">
+                <img
+                  src="assets/images/zoon.png"
+                  alt=""
+                  class="service-review__logo__img"
+                />
+                <span class="rev-count">195 отзывов</span>
+              </div>
+              <div class="service-review__mark">
+                <span class="rev-number">4,5/5</span>
+                <img src="assets/images/45star.png" alt="" class="stars" />
+              </div>
+            </a>
+
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.32top.ru/clinics/1909/"
+              class="service-review"
+            >
+              <div class="service-review__logo">
+                <img
+                  src="assets/images/32-top.png"
+                  alt=""
+                  class="service-review__logo__img"
+                />
+                <span class="rev-count">13 отзывов</span>
+              </div>
+              <div class="service-review__mark">
+                <span class="rev-number">4,5/5</span>
+                <img src="assets/images/45star.png" alt="" class="stars" />
+              </div>
+            </a>
+          </div>
+          <div class="swiper reviews__swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide slide1">
+                <video
+                  controls
+                  poster="assets/images/promo__rev.png"
+                  src="assets/videos/first__review.MP4"
+                  class="first__review"
+                ></video>
+              </div>
+              <div class="swiper-slide slide2">
+                <video
+                  controls
+                  src="assets/videos/second__review.MP4"
+                  class="second__review"
+                ></video>
+              </div>
+              <div class="swiper-slide slide3">
+                <video
+                  controls
+                  src="assets/videos/third__review.MP4"
+                  class="third__review"
+                ></video>
+              </div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <div class="reviews__wrapper">
+            <div
+              class="mobilerev"
+              style="
+                width: 100%;
+                height: 700px;
+                overflow: hidden;
+                position: relative;
+              "
+            >
+              <iframe
+                style="
+                  width: 100%;
+                  height: 100%;
+                  border: 1px solid #e6e6e6;
+                  border-radius: 20px;
+                  box-sizing: border-box;
+                "
+                src="https://yandex.ru/maps-reviews-widget/1005507806?comments"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="map__widget section-animate" id="section5">
+        <div class="map-widget-background"></div>
+        <h2 class="header-two">Ждем вас в Дент Сервис!</h2>
+        <div class="map-widget__wrapper">
+          <div class="howtodirect">
+            <div class="map__adres">г. Москва, ул. Вильнюсская, д. 13</div>
+            <div class="metro-wrapper">
+              <div class="first__metro">
+                <div class="logo__name">
+                  <img
+                    src="assets/images/metro1.png"
+                    alt="Логотип метро"
+                    class="metrr"
+                  />
+                  <div class="logo__text">Ясенево</div>
+                </div>
+                <div class="buses">
+                  <img src="assets/images/bus.svg" alt="Логотип автобуса" />
+                  <div class="buses__numbers">264, т72</div>
+                </div>
+              </div>
+              <div class="first__metro">
+                <div class="logo__name">
+                  <img
+                    src="assets/images/metro1.png"
+                    alt="Логотип метро"
+                    class="metrr"
+                  />
+                  <div class="logo__text">Теплый стан</div>
+                </div>
+                <div class="buses">
+                  <img src="assets/images/bus.svg" alt="Логотип автобуса" />
+                  <div class="buses__numbers">т72, 281, 264</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="work-time">
+            <div class="work-time-adv">
+              <div class="good__place">
+                <span class="good-place__span">Хорошее место 2023</span>
+              </div>
+              <div class="free-parking">
+                <span class="free-parking__span">Бесплатная парковка</span>
+              </div>
+            </div>
+            <div class="work-time-descr">
+              <div class="weekdays">Пн - Сб: с 9:00 до 21:00</div>
+              <div class="sunday">Вс: с 9:00 до 20:00</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="map__wrapper" style="position: relative; overflow: hidden">
+        <a
+          href="https://yandex.ru/maps/org/dent_servis/1005507806/?utm_medium=mapframe&utm_source=maps"
+          style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+          >Дент Сервис</a
+        ><a
+          href="https://yandex.ru/maps/213/moscow/category/dental_clinic/184106132/?utm_medium=mapframe&utm_source=maps"
+          style="color: #eee; font-size: 12px; position: absolute; top: 14px"
+          >Стоматологическая клиника в Москве</a
+        ><a
+          href="https://yandex.ru/maps/213/moscow/category/dental_polyclinic/184106130/?utm_medium=mapframe&utm_source=maps"
+          style="color: #eee; font-size: 12px; position: absolute; top: 28px"
+          >Стоматологическая поликлиника в Москве</a
+        ><iframe
+          class="map__frame"
+          src="https://yandex.ru/map-widget/v1/?ll=37.519486%2C55.598411&mode=search&oid=1005507806&ol=biz&z=17.08"
+          width="100%"
+          height="400"
+          frameborder="0"
+          scroll="false"
+          allowfullscreen="true"
+          style="position: relative"
+        ></iframe>
+      </div>
+      <div id="yandex-map"></div>
+    </main>
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <section class="questions-contacts">
+          <div class="logo-and-numbers">
+            <img
+              src="assets/images/logodentservice1.svg"
+              alt=""
+              class="footer-logo"
+            />
+            <div class="social_media">
+              <a
+                rel="noopener"
+                href="https://vk.com/dentserv"
+                target="_blank"
+                class="social"
+              >
+                <img src="assets/images/vk_icon.svg" alt="" class="vk-logo" />
+              </a>
+              <a
+                rel="noopener"
+                href="https://wa.me/+79154220922?text=Здравствуйте! Мы клиника Дент Сервис."
+                target="_blank"
+                href=""
+                class="social"
+              >
+                <img src="assets/images/wa__icon.svg" alt="" class="wa-logo" />
+              </a>
+            </div>
+            <div class="licence-copy">
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://dentserv.ru/documents"
+                class="licence-link"
+              >
+                <span class="licence-copyright">Лицензия</span>
+              </a>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://dentserv.ru/policy"
+                class="copyright-link"
+              >
+                <span class="licence-copyright"
+                  >Политика конфиденциальности</span
+                >
+              </a>
+            </div>
+            <div class="numbers">
+              <a href="tel:+7 (495) 422-03-11" class="first__number"
+                >+7 (495) 422-03-11</a
+              >
+              <a href="tel:+7 (495) 422-09-22" class="first__number"
+                >+7 (495) 422-09-22</a
+              >
+            </div>
+          </div>
+          <div class="logo-and-numbersm">
+            <div class="logo-and-numbers__wrapper">
+              <img
+                src="assets/images/logodentservice1.svg"
+                alt=""
+                class="footer-logo"
+              />
+              <div class="numbers">
+                <a href="tel:+7 (495) 422-03-11" class="first__number"
+                  >+7 (495) 422-03-11</a
+                >
+                <a href="tel:+7 (495) 422-09-22" class="first__number"
+                  >+7 (495) 422-09-22</a
+                >
+              </div>
+            </div>
+            <div class="social_media">
+              <a
+                rel="noopener"
+                href="https://vk.com/dentserv"
+                target="_blank"
+                class="social"
+              >
+                <img src="assets/images/vk_icon.svg" alt="" class="vk-logo" />
+              </a>
+              <a
+                rel="noopener"
+                href="https://wa.me/+79154220922?text=Здравствуйте! Мы клиника Дент Сервис."
+                target="_blank"
+                href=""
+                class="social"
+              >
+                <img src="assets/images/wa__icon.svg" alt="" class="wa-logo" />
+              </a>
+            </div>
+            <div class="licence-copy">
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://dentserv.ru/documents"
+                class="licence-link"
+              >
+                <span class="licence-copyright">Лицензия</span>
+              </a>
+              <a
+                target="_blank"
+                rel="noopener"
+                href="https://dentserv.ru/policy"
+                class="copyright-link"
+              >
+                <span class="licence-copyright"
+                  >Политика конфиденциальности</span
+                >
+              </a>
+            </div>
+          </div>
+        </section>
+        <div class="copyright__block">
+          © 2007 - 2024. Общество с ограниченной ответственностью «ДЕНТ
+          СЕРВИС»<br />
+          Сайт носит информационный характер и не является публичной офертой.
+          Возможны противопоказания. Необходимо проконсультироваться со
+          специалистом.
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="//cdn.callibri.ru/callibri.js"
+      type="text/javascript"
+      charset="utf-8"
+      defer
+    ></script>
+    <script src="https://unpkg.com/two-up-element@1"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/buttons.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/trust-carousel.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/visit-swiper.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/index.js"></script>
+    <script type="text/javascript">
+      // Функция ymaps.ready() будет вызвана, когда
+      // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+      ymaps.ready(init);
+      function init() {
+        // Создание карты.
+        var myMap = new ymaps.Map("yandex-map", {
+          // Координаты центра карты.
+          // Порядок по умолчанию: «широта, долгота».
+          // Чтобы не определять координаты центра карты вручную,
+          // воспользуйтесь инструментом Определение координат.
+          center: [55.598716, 37.519276],
+          // Уровень масштабирования. Допустимые значения:
+          // от 0 (весь мир) до 19.
+          zoom: 16,
+          controls: [
+            "zoomControl",
+            "trafficControl",
+            "typeSelector",
+            "geolocationControl",
+          ],
+        });
+        myMap.behaviors
+          // Отключаем часть включенных по умолчанию поведений:
+          //  - drag - перемещение карты при нажатой левой кнопки мыши;
+          //  - magnifier.rightButton - увеличение области, выделенной правой кнопкой мыши.
+          .disable(["scrollZoom", "rightMouseButtonMagnifier"]);
+
+        async function findAndAddOrganization(orgId, myMap) {
+          try {
+            const orgGeoObject = await ymaps.findOrganization(orgId);
+            console.log(orgGeoObject);
+            orgGeoObject.options.set("preset", "islands#redDotIcon");
+            myMap.geoObjects.add(orgGeoObject);
+            orgGeoObject.balloon.open();
+          } catch (error) {
+            console.error("Ошибка при поиске организации:", error);
+          }
+        }
+
+        // Пример вызова функции
+        findAndAddOrganization("1005507806", myMap);
+      }
+    </script>
+    <script src="js/section-animate.js"></script>
+  </body>
+</html>
