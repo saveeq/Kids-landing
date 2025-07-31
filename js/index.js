@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const thankYouMessage = document.getElementById('thankYouMessage');
     const police = document.getElementById('formPolice');
     const formhead = document.getElementById('formHead');
+    const formText = document.querySelector('.form-text');
 
 
 
@@ -32,7 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (sessionStorage.getItem('formSubmitted') === 'true') {
             form.style.display = 'none';
             police.style.display = 'none';
-            formhead.style.display = 'none';// Скрываем форму
+            formhead.style.display = 'none';
+            formText.style.display = 'none';// Скрываем форму
             thankYouMessage.style.display = 'block'; // Показываем сообщение "Спасибо!"
         } else {
             form.style.display = 'flex'; // Показываем форму при открытии модального окна
@@ -42,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
 
-    const modalTimer = setInterval(openModal, 30000);
+    const modalTimer = setTimeout(openModal, 60000);
 
 
 
@@ -85,10 +87,95 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
+    // Модернизированная функция валидации для РФ-номера
     function validatePhone(phone) {
-
-        const phonePattern = /^(\+7|8)\s?\(?\d{3}\)?\s?\d{3}[- ]?\d{2}[- ]?\d{2}$/;
+        // Принимает +7 (999) 999-99-99, +7 999 999-99-99, 8 (999) 999-99-99, 8 999 999-99-99
+        const phonePattern = /^(\+7|8)\s?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
         return phonePattern.test(phone);
+    }
+
+    // Маска для инпута телефона (модальное окно)
+    const phoneInput = document.getElementById('phone');
+    if (phoneInput) {
+        phoneInput.addEventListener('focus', function () {
+            if (!this.value) {
+                this.value = '+7 (';
+            }
+        });
+        phoneInput.addEventListener('input', function (e) {
+            const input = this;
+            const value = input.value.replace(/\D/g, '').substring(0, 11);
+            let formatted = '';
+            if (e.inputType && e.inputType.startsWith('delete')) {
+                // Не форматируем при удалении, просто оставляем value
+                input.value = input.value;
+                return;
+            }
+            if (value.length > 0) {
+                formatted = '+7 (' + value.substring(1, 4);
+                if (value.length >= 4) formatted += ') ' + value.substring(4, 7);
+                if (value.length >= 7) formatted += '-' + value.substring(7, 9);
+                if (value.length >= 9) formatted += '-' + value.substring(9, 11);
+            }
+            input.value = formatted;
+        });
+    }
+
+    // === ФИНАЛЬНАЯ ФОРМА ===
+    const finalForm = document.querySelector('.final-form__form');
+    if (finalForm) {
+        const finalPhoneInput = finalForm.querySelector('input[name="finalPhone"]');
+        const finalNameInput = finalForm.querySelector('input[type="text"]');
+        const finalPhoneError = document.getElementById('finalPhoneError');
+
+        // Маска для финального инпута телефона
+        finalPhoneInput.addEventListener('focus', function () {
+            if (!this.value) {
+                this.value = '+7 (';
+            }
+        });
+        finalPhoneInput.addEventListener('input', function (e) {
+            const input = this;
+            const value = input.value.replace(/\D/g, '').substring(0, 11);
+            let formatted = '';
+            if (e.inputType && e.inputType.startsWith('delete')) {
+                input.value = input.value;
+                return;
+            }
+            if (value.length > 0) {
+                formatted = '+7 (' + value.substring(1, 4);
+                if (value.length >= 4) formatted += ') ' + value.substring(4, 7);
+                if (value.length >= 7) formatted += '-' + value.substring(7, 9);
+                if (value.length >= 9) formatted += '-' + value.substring(9, 11);
+            }
+            input.value = formatted;
+        });
+
+        finalForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = finalNameInput.value.trim();
+            const phone = finalPhoneInput.value.trim();
+            if (!validatePhone(phone)) {
+                finalPhoneError.style.display = 'block';
+                return;
+            } else {
+                finalPhoneError.style.display = 'none';
+            }
+            // Отправка данных через sendmail.php
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'sendmail.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    finalForm.reset();
+                    finalPhoneError.style.display = 'none';
+                    alert('Спасибо! Ваша заявка отправлена.');
+                } else if (xhr.readyState == 4) {
+                    alert('Ошибка при отправке сообщения.');
+                }
+            }
+            xhr.send(`name=${encodeURIComponent(name)}&phone=${encodeURIComponent(phone)}`);
+        });
     }
 
     function sendData(name, phone) {

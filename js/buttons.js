@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Активируем первый элемент по умолчанию
-    const firstBtn = document.querySelector('.type-button_container');
+    const firstBtn = document.querySelector('.type-button_container-start');
     const firstContent = document.getElementById(firstBtn.getAttribute('data-target'));
     firstBtn.classList.add('active');
     firstContent.classList.add('active');

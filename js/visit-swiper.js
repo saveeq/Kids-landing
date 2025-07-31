@@ -8,9 +8,9 @@ const visitSwiper = new Swiper('.visit-swiper', {
     speed: 500,
 
     autoplay: {
-        delay: 4000,
+        delay: 3000,
         disableOnInteraction: false,
-        pauseOnMouseEnter: true,
+        pauseOnMouseEnter: false, // отключаем стандартную паузу
       },
 
     pagination: {
@@ -22,6 +22,24 @@ const visitSwiper = new Swiper('.visit-swiper', {
         el: '.swiper-scrollbar',
     },
 });
+
+const visitSwiperEl = document.querySelector('.visit-swiper');
+if (visitSwiperEl) {
+  let defaultDelay = 3000;
+  let hoverDelay = 5000;
+
+  visitSwiperEl.addEventListener('mouseenter', () => {
+    visitSwiper.autoplay.stop();
+    visitSwiper.params.autoplay.delay = hoverDelay;
+    visitSwiper.autoplay.start();
+  });
+
+  visitSwiperEl.addEventListener('mouseleave', () => {
+    visitSwiper.autoplay.stop();
+    visitSwiper.params.autoplay.delay = defaultDelay;
+    visitSwiper.autoplay.start();
+  });
+}
 
 if (document.querySelector('.cases-swiper')) {
   new Swiper('.cases-swiper', {

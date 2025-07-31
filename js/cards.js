@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Добавляем задержку для каждой последующей карточки
                 setTimeout(() => {
                     card.classList.add('show');
-                }, index * 500); // 200ms задержка между карточками
+                }, index * 200); // 200ms задержка между карточками
             }
         });
     }
